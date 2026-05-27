@@ -25,23 +25,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="site-title">Male Health & Sleep</h1>
-            <p>Your Guide to Better Sleep & Male Wellness</p>
-        </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <a href="index.html">Home</a>
-            <a href="sleep-tips.html">Sleep Tips</a>
-            <a href="wellness.html">Male Wellness</a>
-            <!-- <a href="supplements.html">Supplement Reviews</a> -->
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+    <div id="header"></div>
 
     <main class="container">
         <h2>Disclaimer</h2>
@@ -50,19 +34,15 @@
         <p>This site does not endorse any specific medical treatment, medication or cure. Reliance on any information provided by this website is solely at your own risk.</p>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="disclaimer.html">Disclaimer</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-            <div class="disclaimer-text">
-                <p>Disclaimer: All content on this website is for general informational and educational purposes only. It is not intended to be medical advice, diagnosis or treatment. Please consult a licensed physician for personal health issues.</p>
-                <p>&copy; 2025 Male Health & Sleep. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('header').innerHTML = html);
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
 </body>
 </html>
